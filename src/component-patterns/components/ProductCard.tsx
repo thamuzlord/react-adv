@@ -2,9 +2,6 @@ import { createContext } from 'react';
 import styles from '../styles/styles.module.css'
 import { useProduct } from '../hooks/useProduct';
 import { ProductContextProps, ProductCardProps } from '../interfaces/interfaces';
-import { ProductTitle } from './ProductTitle';
-import { ProductImage } from './ProductImage';
-import { ProductButtons } from './ProductButtons';
 
 export const ProductContext = createContext({} as ProductContextProps);
 const { Provider } = ProductContext;
@@ -32,7 +29,3 @@ const {counter, increaseBy } = useProduct();
     </Provider>
   )
 }
-
-ProductCard.Title = ProductTitle;
-ProductCard.Image = ProductImage
-ProductCard.Buttons = ProductButtons;
