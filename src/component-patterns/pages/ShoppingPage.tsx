@@ -1,4 +1,5 @@
 import { ProductButtons, ProductCard, ProductImage, ProductTitle } from "../components"
+import '../styles/custom-styles.css'
 
 const product = {
   id: '1',
@@ -22,9 +23,17 @@ export const ShoppingPage = () => {
               <ProductCard.Buttons />
           </ProductCard>
 
-          <ProductCard product={product}>
+          <ProductCard className="bg-dark" product={product}>
+            <ProductImage className="custom-image" />
+            <ProductTitle className="text-white" title={'vaaasco'} />
+            <ProductButtons className="custom-buttons" />
+          </ProductCard>
+
+          <ProductCard style={{
+            backgroundColor:"red"
+          }} product={product}>
             <ProductImage />
-            <ProductTitle title={'vaaasco'} />
+            <ProductTitle />
             <ProductButtons />
           </ProductCard>
         </div>
